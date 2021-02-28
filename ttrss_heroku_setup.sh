@@ -14,8 +14,6 @@ echo -e "Testing if necessary packages are installed . . ."
 type heroku >/dev/null 2>&1 || { echo >&2 "I require the heroku-toolbelt but it's not installed.  Aborting."; exit 1; }
 type git >/dev/null 2>&1 || { echo >&2 "I require git but it's not installed.  Aborting."; exit 1; }
 type psql >/dev/null 2>&1 || { echo >&2 "I require psql but it's not installed.  Aborting."; exit 1; }
-echo -e "We have everything we need! Now log in with your heroku account (set one up at https://id.heroku.com/signup)"
-heroku login
 echo -n "What should this app be called? (i.e. the url will look like this: appname.heroku.com ) *TIP* DO NOT NAME IT ttrss *TIP* : "
 read appname
 echo -n "$appname is going to be created and git will begin tracking with heroku, rather than the repository you downloaded this from. Is this okay? Y/N: "
